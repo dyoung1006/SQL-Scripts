@@ -1,4 +1,4 @@
-USE bestbuy
+USE bestbuy;
 
 -- find all products 
 SELECT * FROM Products;
@@ -13,7 +13,7 @@ SELECT * FROM Products;
  SELECT * FROM Products WHERE NOT Price = 11.99 ORDER BY 3;
  
 -- find  all products and sort them by price from greatest to least
- SELECT * FROM Products ORDER BY 3 DESC -- 3 is price
+ SELECT * FROM Products ORDER BY 3 DESC; -- 3 is price
 
 -- find all employees who don't have a middle initial
  SELECT * FROM employees WHERE MiddleInitial IS NULL;
