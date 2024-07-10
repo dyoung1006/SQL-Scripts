@@ -5,7 +5,7 @@ SELECT
 FROM products AS p 
 JOIN categories AS c
 	ON c.CategoryID = p.CategoryID
-WHERE c.Name like 'computers'
+WHERE c.Name like 'computers';
  
 /* joins: find all product names, product prices, and products ratings that have a rating of 5 */
 SELECT 
@@ -13,7 +13,7 @@ SELECT
 FROM reviews as r
 JOIN products as p
 	ON p.ProductID = r.ProductID
-WHERE r.Rating = 5
+WHERE r.Rating = 5;
  
 /* joins: find the employee with the most total quantity sold.  use the sum() function and group by */
 SELECT
@@ -31,7 +31,7 @@ SELECT
 FROM departments as d
 JOIN categories as c
 ON c.DepartmentID = d.DepartmentID
-WHERE c.Name IN ('Appliances','Games')
+WHERE c.Name IN ('Appliances','Games');
 
 
 /* joins: find the product name, total # sold, and total price sold,
@@ -43,7 +43,7 @@ JOIN sales as s
 ON s.ProductID = p.ProductID
 WHERE p.Name like 'Eagles: Hotel%'
 GROUP BY p.ProductID, p.Name
-ORDER BY 4
+ORDER BY 4;
 
 /* joins: find Product name, reviewer name, rating, and comment on the Visio TV. (only return for the lowest rating!) */
 SELECT 
@@ -70,4 +70,4 @@ ON s.ProductID = p.ProductID
 JOIN employees as e
 ON e.EmployeeID = s.EmployeeID
 GROUP BY e.EmployeeID, CONCAT(e.LastName,', ',e.FirstName), p.Name
-ORDER BY 2, 4 DESC
+ORDER BY 2, 4 DESC;
